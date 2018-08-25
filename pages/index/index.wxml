@@ -1,4 +1,65 @@
 <!--index.wxml-->
 <view class="container">
-  
+  <view class="banner">
+    <view class="name">
+      <image src="../../images/title.png" />
+    </view>
+  </view>
+  <view class="list">
+    <view class="product">
+      <navigator class="head-image">
+        <image src="https://resource.smartisan.com/resource/25cc6e783a664fbdf83c3c34774a9826.png" />
+      </navigator>
+      <view class="pro-text">
+        <text class="pro-name">红烧牛肉面</text>
+        <text class="pro-intro">新品上架，预购从速</text>
+        <text class="pro-money">￥5.00</text>
+      </view>
+      <button class="buy" size="mini" type="primary">立即购买</button>
+    </view>
+    <view class="product">
+      <navigator class="head-image">
+        <image src="https://resource.smartisan.com/resource/25cc6e783a664fbdf83c3c34774a9826.png" />
+      </navigator>
+      <view class="pro-text">
+        <text class="pro-name">红烧牛肉面</text>
+        <text class="pro-intro">新品上架，预购从速</text>
+        <text class="pro-money">￥5.00</text>
+      </view>
+      <button class="buy" size="mini" type="primary">立即购买</button>
+    </view>
+    <view class="product">
+      <navigator class="head-image">
+        <image src="https://resource.smartisan.com/resource/25cc6e783a664fbdf83c3c34774a9826.png" />
+      </navigator>
+      <view class="pro-text">
+        <text class="pro-name">红烧牛肉面</text>
+        <text class="pro-intro">新品上架，预购从速</text>
+        <text class="pro-money">￥5.00</text>
+      </view>
+      <button class="buy" size="mini" type="primary">立即购买</button>
+    </view>
+    <view class="product">
+      <navigator class="head-image">
+        <image src="https://resource.smartisan.com/resource/25cc6e783a664fbdf83c3c34774a9826.png" />
+      </navigator>
+      <view class="pro-text">
+        <text class="pro-name">红烧牛肉面</text>
+        <text class="pro-intro">新品上架，预购从速</text>
+        <text class="pro-money">￥5.00</text>
+      </view>
+      <button class="buy" size="mini" type="primary">立即购买</button>
+    </view>
+    <view class="product">
+      <navigator class="head-image">
+        <image src="https://resource.smartisan.com/resource/25cc6e783a664fbdf83c3c34774a9826.png" />
+      </navigator>
+      <view class="pro-text">
+        <text class="pro-name">红烧牛肉面</text>
+        <text class="pro-intro">新品上架，预购从速</text>
+        <text class="pro-money">￥5.00</text>
+      </view>
+      <button class="buy" size="mini" type="primary">立即购买</button>
+    </view>
+  </view>
 </view>

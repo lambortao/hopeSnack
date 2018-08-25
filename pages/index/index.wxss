@@ -1,1 +1,78 @@
-/**index.wxss**/
+/*# sourceMappingURL=index.wxss.map */
+.banner{
+  width: 100%;
+  height: 240rpx;
+  background-image: url('https://placeimg.com/375/240/any');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+}
+.name image{
+  width: 392rpx;
+  height: 100rpx;
+}
+.list{
+  width: 100%;
+  padding: 4vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.product{
+  width: 44vw;
+  margin-bottom: 25rpx;
+}
+.product button{
+  width: 100%;
+}
+.head-image{
+  width: 44vw;
+  height: 44vw;
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+  border-radius: 10rpx;
+}
+.head-image image{
+  width: 100%;
+}
+.pro-text{
+  width: 100%;
+  padding: 20rpx 10rpx;
+}
+.pro-text text{
+  display: block;
+}
+.pro-name{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+}
+.pro-intro{
+  margin: 15rpx 0 12rpx 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.2;
+  font-size: 24rpx;
+  color: #7f7f7f;
+}
+.pro-money{
+  color: #d44d44;
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 700;
+  transform: translateX(-4rpx);
+}
