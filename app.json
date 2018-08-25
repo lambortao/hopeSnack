@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/src/tools",
+    "pages/index/src/experience",
+    "pages/index/src/article",
+    "pages/index/src/share"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color": "#999",
+    "position": "bottom",
+    "selectedColor": "#000",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/index/src/tools",
+      "text": "插件"
+    }, {
+      "pagePath": "pages/index/src/experience",
+      "text": "常谈"
+    }, {
+      "pagePath": "pages/index/src/article",
+      "text": "文章"
+    }, {
+      "pagePath": "pages/index/src/share",
+      "text": "分享"
+    }]
+  }
+}

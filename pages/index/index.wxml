@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='brief-list'>
+    <view class="brief" wx:for="{{brief}}" wx:for-item="item">
+      {{ item.message }}
+    </view>
+  </view>
+</view>
