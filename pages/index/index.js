@@ -9,21 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    brief: [{
-      message: 'HTML&CSS'
-    }, {
-      message: 'JavaScript'
-    }, {
-      message: 'Vue'
-    }, {
-      message: '安全'
-    }, {
-      message: 'PHP'
-    }, {
-      message: 'PHP'
-    }, {
-      message: 'PHP'
-    }]
+    
   },
 
   /**

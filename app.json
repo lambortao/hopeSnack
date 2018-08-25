@@ -1,36 +1,29 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/index/src/tools",
-    "pages/index/src/experience",
-    "pages/index/src/article",
-    "pages/index/src/share"
+    "pages/detail/index",
+    "pages/order/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "希望小卖铺",
+    "navigationBarTextStyle": "black"
   },
   "tabBar":{
-    "color": "#999",
     "position": "bottom",
-    "selectedColor": "#000",
+    "color": "#9a9a9a",
+    "selectedColor": "#666",
     "list": [{
       "pagePath": "pages/index/index",
-      "text": "首页"
+      "text": "商品",
+      "iconPath": "./images/list-out.png",
+      "selectedIconPath": "./images/list-over.png"
     }, {
-      "pagePath": "pages/index/src/tools",
-      "text": "插件"
-    }, {
-      "pagePath": "pages/index/src/experience",
-      "text": "常谈"
-    }, {
-      "pagePath": "pages/index/src/article",
-      "text": "文章"
-    }, {
-      "pagePath": "pages/index/src/share",
-      "text": "分享"
+      "pagePath": "pages/order/index",
+      "text": "订单",
+      "iconPath": "./images/order-out.png",
+      "selectedIconPath": "./images/order-over.png"
     }]
   }
 }

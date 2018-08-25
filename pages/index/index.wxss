@@ -1,16 +1,1 @@
 /**index.wxss**/
-.brief-list{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #999;
-  padding: 10rpx;
-}
-.brief{
-  padding: 10rpx 20rpx;
-  font-size: 24rpx;
-  border-radius: 5rpx;
-  border: 1rpx solid #999;
-  margin: 5rpx;
-}
