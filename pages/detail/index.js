@@ -11,7 +11,12 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    imgUrls: [
+      'https://placeimg.com/750/540/any',
+      'https://placeimg.com/750/540/any',
+      'https://placeimg.com/750/540/any',
+      'https://placeimg.com/750/540/any'
+    ]
   },
 
   /**

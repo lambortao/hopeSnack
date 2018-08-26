@@ -7,7 +7,7 @@
   </view>
   <view class="list">
     <view class="product">
-      <navigator class="head-image">
+      <navigator url="/pages/detail/index" class="head-image">
         <image src="https://resource.smartisan.com/resource/25cc6e783a664fbdf83c3c34774a9826.png" />
       </navigator>
       <view class="pro-text">

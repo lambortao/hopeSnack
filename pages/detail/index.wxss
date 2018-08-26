@@ -1,1 +1,55 @@
 /* pages/detail/index.wxss */
+swiper,
+swiper-item{
+  width: 750rpx;
+  height: 540rpx;
+}
+.swiper-image{
+  width: 100%;
+  height: 100%;
+}
+.information{
+  width: 100%;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+}
+.information text{
+  display: block;
+  width: 100%;
+}
+.name{
+  font-size: 20pt;
+  font-weight: bold;
+  color: #353535;
+}
+.intro{
+  margin: 14pt 0;
+  font-size: 26rpx;
+  color: #888;
+}
+.money{
+  font-size: 54rpx;
+  color: #e64340;
+  font-weight: 700;
+  transform: translateX(-6rpx);
+}
+.button{
+  width: 100%;
+  height: 150rpx;
+}
+.button-box{
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+button{
+  width: 100%;
+}
