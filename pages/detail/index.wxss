@@ -23,8 +23,9 @@ swiper-item{
   color: #353535;
 }
 .intro{
-  margin: 14pt 0;
+  margin: 10pt 0 14pt 0;
   font-size: 26rpx;
+  line-height: 50rpx;
   color: #888;
 }
 .money{

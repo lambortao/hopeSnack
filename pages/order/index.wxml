@@ -1,2 +1,7 @@
 <!--pages/order/index.wxml-->
-<view>订单页</view>
+<view>
+  <view class="user">
+    <image class="head" />
+    <text class="name">陶子阳</text>
+  </view>
+</view>

@@ -53,10 +53,8 @@
   width: 100%;
   padding: 20rpx 10rpx;
 }
-.pro-text text{
-  display: block;
-}
 .pro-name{
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -66,6 +64,7 @@
   font-weight: bold;
 }
 .pro-intro{
+  display: block;
   margin: 15rpx 0 12rpx 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -76,7 +75,8 @@
 }
 .pro-money{
   color: #e64340;
-  display: inline-block;
+  display: flex;
+  align-items: flex-end;
   white-space: nowrap;
   font-weight: 700;
   transform: translateX(-4rpx);
