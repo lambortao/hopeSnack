@@ -1,11 +1,34 @@
 <!--pages/order/index.wxml-->
 <view>
   <view class="user">
-    <view class="head">
+    <view class="user-head">
       <image src="https://placeimg.com/160/160/any" />
     </view>
-    <text class="name">陶子阳</text>
+    <text class="user-name">陶子阳</text>
     <!-- <text class="money">已消费：￥500</text> -->
-    <text class="money">余额：￥500.00</text>
+    <text class="user-money">余额：￥0.00</text>
+  </view>
+  <view class="bill-list">
+    <view class="bill-header">
+      <text class="bill-title">全部订单</text>
+      <text class="bill-over-money red">未结算：￥10.00</text>
+    </view>
+    <view class="bill">
+      <view class="alone-bill">
+        <text class="product-name">番茄鸡蛋面</text>
+        <text class="buy-time">2018-08-29 12:00:00</text>
+        <text class="product-money">￥5.00</text>
+      </view>
+      <view class="alone-bill">
+        <text class="product-name">番茄鸡蛋面</text>
+        <text class="buy-time">2018-08-29 12:00:00</text>
+        <text class="product-money">￥5.00</text>
+      </view>
+      <view class="alone-bill clear">
+        <text class="product-name">番茄鸡蛋面</text>
+        <text class="buy-time">2018-08-29 12:00:00</text>
+        <text class="product-money">￥5.00</text>
+      </view>
+    </view>
   </view>
 </view>
