@@ -7,6 +7,7 @@
     <text class="user-name">陶子阳</text>
     <!-- <text class="money">已消费：￥500</text> -->
     <text class="user-money">余额：￥0.00</text>
+    <text class="about">?</text>
   </view>
   <view class="bill-list">
     <view class="bill-header">
@@ -29,6 +30,11 @@
         <text class="buy-time">2018-08-29 12:00:00</text>
         <text class="product-money">￥5.00</text>
       </view>
+    </view>
+  </view>
+  <view class="about-box">
+    <view class="about-intro">
+      <text></text>
     </view>
   </view>
 </view>

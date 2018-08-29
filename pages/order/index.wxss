@@ -48,7 +48,19 @@
   font-size: 0.8em;
   font-weight: bold;
 }
-
+.about{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .bill{
   width: 100%;
   box-sizing: border-box;
