@@ -1,7 +1,11 @@
 <!--pages/order/index.wxml-->
 <view>
   <view class="user">
-    <image class="head" />
+    <view class="head">
+      <image src="https://placeimg.com/160/160/any" />
+    </view>
     <text class="name">陶子阳</text>
+    <!-- <text class="money">已消费：￥500</text> -->
+    <text class="money">余额：￥500.00</text>
   </view>
 </view>
