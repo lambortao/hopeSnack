@@ -9,29 +9,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    productList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // wx.request({
-    //   url: 'http://192.168.0.104/sell/admin.php/myApi/getList',
-    //   data: {
-    //     id: '1'
-    //   },
-    //   method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-    //   success: function (res) {
-    //     console.log(res)
-    //   },
-    //   fail: function () {
-    //     // fail  
-    //   },
-    //   complete: function () {
-    //     // complete  
-    //   }
-    // })
+    wx.request({
+      url: 'https://zytao.cc/server/snack/admin.php/product/getProductList',
+      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      success: function (res) {
+        console.log(res)
+      },
+      fail: function () {
+        // fail  
+      },
+      complete: function () {
+        // complete  
+      }
+    })
   },
 
   /**
