@@ -6,9 +6,24 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
+    let appid = 'wx3055efa08254b9a2';
+    let secret = 'c88a4d1f729f6c4a94b927e9a7e44e87';
+    
+    
     // 登录
     wx.login({
       success: res => {
+        // 根据临时票据code、APPID、secret来获取openID
+        if (res.code) {
+          let overUrl = `https://api.weixin.qq.com/sns/jscode2session?appid=${appid}&secret=${secret}&js_code=${res.code}&grant_type=authorization_code`;
+          wx.request({
+            url: overUrl,
+            method: 'GET',
+            success: res => {
+              console.log(res);
+            }
+          })
+        }
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })

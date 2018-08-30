@@ -1,10 +1,9 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
 // pages/index/src/tools.js
+var util = require("../../utils/util.js");
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -16,6 +15,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(util.__port(1));
+    console.log(app.globalData);
     wx.request({
       url: 'https://zytao.cc/server/snack/admin.php/product/getProductList',
       method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
