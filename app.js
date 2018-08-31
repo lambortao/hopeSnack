@@ -24,6 +24,7 @@ App({
       })
     })
   },
+  // 获取用户识别code
   wxLogin: function () {
     return new Promise ((resP, rejP) => {
       wx.login({
@@ -35,6 +36,7 @@ App({
       })
     })
   },
+  // 获取用户个人信息
   wxGetUserInfo: function () {
     return new Promise((resP, rej) => {
       // 获取授权
