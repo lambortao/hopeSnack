@@ -20,7 +20,7 @@ App({
             url: overUrl,
             method: 'GET',
             success: res => {
-              console.log(res);
+              // console.log(res);
             }
           })
         }
