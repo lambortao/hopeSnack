@@ -16,7 +16,7 @@ Page({
             than.openid = res.data;
           } else {
             // 已经注册，直接进入小程序
-            
+
           }
         }
       })
@@ -27,16 +27,16 @@ Page({
     let userInfo = e.detail.userInfo;
     userInfo.openid = this.openid;
     console.log(userInfo);
-    // wx.request({
-    //   url: 'https://zytao.cc/server/snack/admin.php/api/getOpenId',
-    //   method: 'POST',
-    //   data: JSON.stringify(userInfor),
-    //   success: function (res) {
-    //     console.log(res.data);
-    //   },
-    //   fail: function () {},
-    //   complete: function () {}
-    // })
+    wx.request({
+      url: 'https://zytao.cc/server/snack/admin.php/api/saveUserInfo',
+      method: 'POST',
+      data: JSON.stringify(userInfo),
+      success: function (res) {
+        console.log(res.data);
+      },
+      fail: function () {},
+      complete: function () {}
+    })
   },
   // 获取用户识别code
   wxLogin: function () {
