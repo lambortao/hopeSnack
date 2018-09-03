@@ -11,29 +11,31 @@ App({
     
     // 获取到微信code和用户信息后拼在一起发到后台
     // 后台会返回用户信息和openid
-    console.log('code');
     this.wxLogin().then(code => {
-      this.wxGetUserInfo().then(userInfor => {
-        userInfor.wxCode = code;
-        console.log(code);
-        wx.request({
-          url: 'https://zytao.cc/server/snack/admin.php/api/getOpenId',
-          method: 'POST',
-          data: JSON.stringify(userInfor),
-          success: function (res) {
-            console.log(res.data);
-            wx.showModal({
-              title: '提示',
-              content: res.data[0].name,
-              showCancel: false,
-              confirmText: '知道了'
-            });
-          },
-          fail: function () {},
-          complete: function () {}
-        })
+      wx.request({
+        url: 'https://zytao.cc/server/snack/admin.php/api/getOpenId',
+        method: 'POST',
+        data: JSON.stringify(code),
+        success: function (res) {
+          console.log(res.data);
+        },
+        fail: function () {},
+        complete: function () {}
       })
     });
+    // this.wxGetUserInfo().then(userInfor => {
+    //   userInfor.wxCode = code;
+    //   wx.request({
+    //     url: 'https://zytao.cc/server/snack/admin.php/api/getOpenId',
+    //     method: 'POST',
+    //     data: JSON.stringify(userInfor),
+    //     success: function (res) {
+    //       console.log(res.data);
+    //     },
+    //     fail: function () {},
+    //     complete: function () {}
+    //   })
+    // })
   },
   // 获取用户识别code
   wxLogin: function () {
