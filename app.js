@@ -14,28 +14,43 @@ App({
     let than = this;
     this.wxLogin().then(code => {
       wx.request({
-        url: 'https://zytao.cc/server/snack/admin.php/api/getOpenId',
+        url: 'https://zytao.cc/server/snack/admin.php/api/findUser',
         method: 'POST',
         data: JSON.stringify(code),
         success: function (res) {
-          console.log(res.data);
-          than.wxGetUserInfo().then(userInfor => {
-            // userInfor.wxCode = code;
-            console.log(userInfor);
-            // wx.request({
-            //   url: 'https://zytao.cc/server/snack/admin.php/api/getOpenId',
-            //   method: 'POST',
-            //   data: JSON.stringify(userInfor),
-            //   success: function (res) {
-            //     console.log(res.data);
-            //   },
-            //   fail: function () {},
-            //   complete: function () {}
-            // })
-          })
-        },
-        fail: function () {},
-        complete: function () {}
+          if (typeof res.data == 'string') {
+            console.log('未注册');
+            than.wxGetUserInfo().then(userInfor => {
+              console.log(userInfor);
+              // wx.request({
+              //   url: 'https://zytao.cc/server/snack/admin.php/api/getOpenId',
+              //   method: 'POST',
+              //   data: JSON.stringify(userInfor),
+              //   success: function (res) {
+              //     console.log(res.data);
+              //   },
+              //   fail: function () {},
+              //   complete: function () {}
+              // })
+            });
+          } else {
+            console.log('已注册');
+          }
+          // if (res.data.hasOwnProperty('id')) {
+          //   // 从数据库中取出数据
+          //   if (res.data.nickName == null && res.data.avatarUrl == null) {
+          //     // 数据库中只有openID却没有用户信息的情况下，还需要去拉取用户信息
+
+          //   } else {
+          //     // 否则就直接进入index页面
+
+          //   }
+          // } else {
+          //   // 数据库中没有数据，就开启首屏点击按钮
+          //   return;
+           
+          // }
+        }
       })
     });
   },

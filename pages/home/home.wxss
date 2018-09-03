@@ -32,3 +32,6 @@ image{
   border: 1px solid #eee;
   margin-bottom: 60rpx;
 }
+button{
+  font-size: 0.7em;
+}
