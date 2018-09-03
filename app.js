@@ -10,8 +10,7 @@ App({
     // logs.unshift(Date.now())
     // wx.setStorageSync('logs', logs)
     
-    // 获取到微信code和用户信息后拼在一起发到后台
-    // 后台会返回用户信息和openid
+    // 获取openid，到后台去查询该用户是否为第一次登录
     let than = this;
     this.wxLogin().then(code => {
       wx.request({
@@ -19,7 +18,7 @@ App({
         method: 'POST',
         data: JSON.stringify(code),
         success: function (res) {
-
+          console.log(res.data);
           than.wxGetUserInfo().then(userInfor => {
             // userInfor.wxCode = code;
             console.log(userInfor);
