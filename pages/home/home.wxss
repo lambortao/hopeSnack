@@ -1,0 +1,34 @@
+/* pages/home/home.wxss */
+view.main{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.welcome{
+  margin-bottom: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 18%;
+  transform: translateY(-80rpx);
+}
+text{
+  font-size: 0.8em;
+  color: #333;
+  line-height: 1.75em;
+  margin-bottom: 30rpx;
+}
+.guide{
+  text-align: center;
+}
+image{
+  width: 132rpx;
+  height: 132rpx;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  margin-bottom: 60rpx;
+}

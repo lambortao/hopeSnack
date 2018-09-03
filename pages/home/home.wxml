@@ -1,0 +1,8 @@
+<view class="main">
+  <view class="welcome">
+    <image class="avatar" />
+    <text class="nick">首页</text>
+    <text class="guide">为保证正常使用，请点击下方的授权按钮，并在微信授权弹窗点击允许。</text>
+  </view>
+  <button bindgetuserinfo="onGetUserinfo" open-type="getUserInfo">点击获取授权</button>
+</view>
