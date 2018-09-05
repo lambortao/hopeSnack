@@ -15,11 +15,15 @@ Page({
       buttonText: '授权获取中...'
     })
   },
-  goStoreIndex: function() {
+  goStoreIndex: function(than) {
+    wx.setStorage({
+      key: 'userInfo',
+      data: than.data.userInfo
+    });
     setTimeout(() => {
       wx.switchTab({
         url: '../index/index'
-      })
+      });
     }, 500);
   },
   onLoad: function() {
@@ -31,7 +35,6 @@ Page({
         method: 'POST',
         data: JSON.stringify(code),
         success: function (res) {
-          console.log(res.data);
           if (typeof res.data == 'string') {
             // 未注册，将openID抛出去，等待用户授权完成后到后台注册
             than.openid = res.data;
@@ -50,7 +53,7 @@ Page({
               disabled: false,
               guide: '欢迎光临~'
             });
-            than.goStoreIndex();
+            than.goStoreIndex(than);
           }
         }
       });
@@ -72,7 +75,7 @@ Page({
           userInfo: res.data,
           guide: '欢迎光临~'
         });
-        than.goStoreIndex();
+        than.goStoreIndex(than);
       },
       fail: function () {},
       complete: function () {}

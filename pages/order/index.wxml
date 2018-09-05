@@ -2,9 +2,9 @@
 <view>
   <view class="user">
     <view class="user-head">
-      <image src="https://placeimg.com/160/160/any" />
+      <image src="{{ userInfo.avatarUrl }}" />
     </view>
-    <text class="user-name">陶子阳</text>
+    <text class="user-name">{{userInfo.nickName}}</text>
     <!-- <text class="money">已消费：￥500</text> -->
     <text class="user-money">余额：￥0.00</text>
     <text class="about">?</text>

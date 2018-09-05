@@ -1,5 +1,5 @@
 // pages/order/index.js
-Component({
+Page({
   /**
    * 组件的属性列表
    */
@@ -11,7 +11,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    userInfo: {}
   },
 
   /**
@@ -19,5 +19,18 @@ Component({
    */
   methods: {
 
+  },
+  onReady: function() {
+    let than = this;
+    wx.getStorage({
+      key: 'userInfo',
+      success: res => {
+        if (res.errMsg) {
+          than.setData({
+            userInfo: res.data
+          });
+        }
+      }
+    })
   }
 })
