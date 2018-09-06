@@ -5,10 +5,11 @@ Page({
    */
   data: {
     productData: [],
-    imgUrls: []
+    imgUrls: [],
+    userInfo: [],
+    buyAlert: false
   },
   onLoad: function (options) {
-    console.log(options.id);
     let than = this;
     wx.request({
       url: 'https://zytao.cc/server/snack/admin.php/product/detail',
@@ -26,28 +27,62 @@ Page({
       },
       fail: function () {},
       complete: function () {}
-    })
+    });
+    wx.getStorage({
+      key: 'userInfo',
+      success: res => {
+        if (res.errMsg) {
+          than.setData({
+            userInfo: res.data
+          });
+        }
+      }
+    });
   },
-  /**
-   * 组件的方法列表
-   */
-  methods: {
-    buy () {
+  buy (e) {
+    let lsBuy = wx.getStorageSync('buyAlert');
+    if (this.data.productData.length === 0) {
+      wx.showToast({
+        title: '获取商品信息失败！',
+        icon: 'success',
+        duration: 5000
+      });
+      return;
+    }
+    if (this.data.userInfo.length === 0) {
+      wx.showToast({
+        title: '获取用户信息失败！',
+        icon: 'success',
+        duration: 5000
+      });
+      return;
+    }
+    let than = this;
+    if (lsBuy) {
+      this.buybuybuy();
+    } else {
       wx.showModal({
         title: '提示',
         content: '该小程序为公司内部使用，外部人员请勿下单',
-        showCancel: false,
-        confirmText: '知道了',
+        showCancel: true,
+        cancelText: '不再显示',
+        confirmText: '我已知晓',
         success: function(res) {
           if (res.confirm) {
-            wx.showToast({
-              title: '下单成功',
-              icon: 'success',
-              duration: 2000
-            })
+            than.buybuybuy();
+          } else if (res.cancel) {
+            wx.setStorageSync('buyAlert', true);
+            than.buybuybuy();
           }
         }
       })
     }
+  },
+  buybuybuy: () => {
+    wx.showToast({
+      title: '下单成功',
+      icon: 'success',
+      duration: 2000
+    });
   }
 })
