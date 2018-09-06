@@ -4,15 +4,29 @@ Page({
    * 组件的初始数据
    */
   data: {
-    imgUrls: [
-      'https://placeimg.com/750/540/any',
-      'https://placeimg.com/750/540/any',
-      'https://placeimg.com/750/540/any',
-      'https://placeimg.com/750/540/any'
-    ]
+    productData: [],
+    imgUrls: []
   },
   onLoad: function (options) {
     console.log(options.id);
+    let than = this;
+    wx.request({
+      url: 'https://zytao.cc/server/snack/admin.php/product/detail',
+      method: 'POST',
+      data: JSON.stringify({
+        id: options.id
+      }),
+      success: function (res) {
+        if (res.statusCode === 200) {
+          than.setData({
+            productData: res.data[0],
+            imgUrls: res.data[0].swiper.split('|')
+          });
+        }
+      },
+      fail: function () {},
+      complete: function () {}
+    })
   },
   /**
    * 组件的方法列表

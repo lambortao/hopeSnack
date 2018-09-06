@@ -6,16 +6,16 @@
     interval="{{5000}}" 
     duration="{{500}}"
     indicator-active-color="#09bb07">
-    <block wx:for="{{imgUrls}}">
+    <block wx:for="{{imgUrls}}" wx:key="unique">
       <swiper-item>
         <image class="swiper-image" src="{{item}}" />
       </swiper-item>
     </block>
   </swiper>
   <view class="information">
-    <text class="name">番茄鸡蛋面</text>
-    <text class="intro">番茄鸡蛋面是希望小卖铺不折不扣的爆款，而作为一款大众口味的面，它更是适用于各个时间和场合，特别是早晨，还能有比来一杯番茄鸡蛋面做早餐更好的选择吗？</text>
-    <text class="money">￥5.00</text>
+    <text class="name">{{productData.name}}</text>
+    <text class="intro">{{productData.content}}</text>
+    <text class="money">￥{{productData.price}}</text>
     <text class="button"></text>
   </view>
   <view class="button-box">
