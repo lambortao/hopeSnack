@@ -11,7 +11,9 @@ Page({
       'https://placeimg.com/750/540/any'
     ]
   },
-
+  onLoad: function (options) {
+    console.log(options.id);
+  },
   /**
    * 组件的方法列表
    */

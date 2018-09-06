@@ -15,15 +15,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    return;
+    let than = this;
     wx.request({
-      url: 'https://zytao.cc/server/snack/admin.php/product/detail',
-      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      data: JSON.stringify({
-        id: 1
-      }),
+      url: 'https://zytao.cc/server/snack/admin.php/product/getProductList',
+      method: 'POST',
       success: function (res) {
-        console.log(res)
+        if (res.statusCode === 200) {
+          console.log(res.data);
+          than.setData({
+            productList: res.data
+          })
+        }
       },
       fail: function () {
         // fail  
