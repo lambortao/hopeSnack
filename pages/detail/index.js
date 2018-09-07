@@ -59,7 +59,7 @@ Page({
     }
     let than = this;
     if (lsBuy) {
-      this.buybuybuy();
+      this.buybuybuy(this.data.productData, this.data.userInfo);
     } else {
       wx.showModal({
         title: '提示',
@@ -69,20 +69,37 @@ Page({
         confirmText: '我已知晓',
         success: function(res) {
           if (res.confirm) {
-            than.buybuybuy();
+            than.buybuybuy(than.data.productData, than.data.userInfo);
           } else if (res.cancel) {
             wx.setStorageSync('buyAlert', true);
-            than.buybuybuy();
+            than.buybuybuy(than.data.productData, than.data.userInfo);
           }
         }
       })
     }
   },
-  buybuybuy: () => {
-    wx.showToast({
-      title: '下单成功',
-      icon: 'success',
-      duration: 2000
+  buybuybuy: (pro, user) => {
+    console.log(pro);
+    console.log(user);
+    wx.request({
+      url: 'https://zytao.cc/server/snack/admin.php/product/order',
+      method: 'POST',
+      data: JSON.stringify({
+        product: pro.id,
+        userinfo: user.id
+      }),
+      success: function (res) {
+        if (res.statusCode === 200) {
+          console.log(res.data);
+          wx.showToast({
+            title: '下单成功',
+            icon: 'success',
+            duration: 2000
+          });
+        }
+      },
+      fail: function () {},
+      complete: function () {}
     });
   }
 })
