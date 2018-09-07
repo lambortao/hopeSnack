@@ -79,8 +79,6 @@ Page({
     }
   },
   buybuybuy: (pro, user) => {
-    console.log(pro);
-    console.log(user);
     wx.request({
       url: 'https://zytao.cc/server/snack/admin.php/product/order',
       method: 'POST',
