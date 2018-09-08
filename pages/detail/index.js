@@ -83,12 +83,16 @@ Page({
       url: 'https://zytao.cc/server/snack/admin.php/product/order',
       method: 'POST',
       data: JSON.stringify({
-        product: pro.id,
+        product: {
+          id: pro.id,
+          name: pro.name,
+          price: pro.price
+        },
         userinfo: user.id
       }),
       success: function (res) {
         if (res.statusCode === 200) {
-          console.log(res.data);
+          console.log(res);
           wx.showToast({
             title: '下单成功',
             icon: 'success',
