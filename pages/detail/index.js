@@ -7,7 +7,12 @@ Page({
     productData: [],
     imgUrls: [],
     userInfo: [],
-    buyAlert: false
+    buyAlert: false,
+    buyButton: {
+      content: '立即购买',
+      type: 'primary',
+      disabled: false
+    }
   },
   onLoad: function (options) {
     let than = this;
@@ -23,6 +28,9 @@ Page({
             productData: res.data[0],
             imgUrls: res.data[0].swiper.split('|')
           });
+          if (res.data[0].stock == 0) {
+            than.soldOut();
+          }
         }
       },
       fail: function () {},
@@ -36,6 +44,15 @@ Page({
             userInfo: res.data
           });
         }
+      }
+    });
+  },
+  soldOut () {
+    this.setData({
+      buyButton: {
+        content: '已售罄',
+        type: 'primary',
+        disabled: true
       }
     });
   },
@@ -79,6 +96,7 @@ Page({
     }
   },
   buybuybuy: (pro, user) => {
+    let than = this;
     wx.request({
       url: 'https://zytao.cc/server/snack/admin.php/product/order',
       method: 'POST',
@@ -92,12 +110,16 @@ Page({
       }),
       success: function (res) {
         if (res.statusCode === 200) {
-          console.log(res);
-          wx.showToast({
-            title: '下单成功',
-            icon: 'success',
-            duration: 2000
-          });
+          console.log(res.stock);
+          if (res.stock == 0) {
+            than.soldOut();
+          } else {
+            wx.showToast({
+              title: '下单成功',
+              icon: 'success',
+              duration: 2000
+            });
+          }
         }
       },
       fail: function () {},

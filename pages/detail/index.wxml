@@ -19,6 +19,10 @@
     <text class="button"></text>
   </view>
   <view class="button-box">
-    <button bindtap="buy" size="default" type="primary">立即购买</button>
+    <button 
+    bindtap="buy" 
+    size="default" 
+    type="{{buyButton.type}}" 
+    disabled="{{buyButton.disabled}}">{{buyButton.content}}</button>
   </view>
 </view>
