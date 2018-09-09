@@ -48,6 +48,11 @@ Page({
     });
   },
   soldOut () {
+    wx.showToast({
+      title: '已售罄',
+      image: '../../images/alert.png',
+      duration: 2000
+    });
     this.setData({
       buyButton: {
         content: '已售罄',
