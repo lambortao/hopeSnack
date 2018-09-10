@@ -12,23 +12,16 @@
   <view class="bill-list">
     <view class="bill-header">
       <text class="bill-title">全部订单</text>
-      <text class="bill-over-money red">未结算：￥10.00</text>
+      <text class="bill-over-money red">未结算：￥{{arrears}}</text>
     </view>
     <view class="bill">
-      <view class="alone-bill">
-        <text class="product-name">番茄鸡蛋面</text>
-        <text class="buy-time">2018-08-29 12:00:00</text>
-        <text class="product-money">￥5.00</text>
-      </view>
-      <view class="alone-bill">
-        <text class="product-name">番茄鸡蛋面</text>
-        <text class="buy-time">2018-08-29 12:00:00</text>
-        <text class="product-money">￥5.00</text>
-      </view>
-      <view class="alone-bill clear">
-        <text class="product-name">番茄鸡蛋面</text>
-        <text class="buy-time">2018-08-29 12:00:00</text>
-        <text class="product-money">￥5.00</text>
+      <view 
+      wx:for="{{orderList}}" 
+      wx:key="unique"
+      class="alone-bill {{ item.bill ? 'clear' : '' }}">
+        <text class="product-name">{{item.pro_name}}</text>
+        <text class="buy-time">{{item.start_time}}</text>
+        <text class="product-money">￥{{item.pro_price}}</text>
       </view>
     </view>
   </view>
