@@ -16,7 +16,11 @@
         <text class="pro-money">￥{{item.price}}</text>
       </view>
       <navigator url="/pages/detail/index?id={{item.id}}">
-        <button class="buy" size="mini" type="{{ item.stock == 0 ? 'default' : 'primary' }}">{{ item.stock == 0 ? '已售罄' : '查看详情' }}</button>
+        <button 
+        class="buy" 
+        size="mini" 
+        type="{{ item.stock == 0 ? 'default' : 'primary' }}" 
+        >{{ item.stock == 0 ? '已售罄' : '查看详情' }}</button>
       </navigator>
     </view>
   </view>
