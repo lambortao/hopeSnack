@@ -33,6 +33,7 @@ Page({
       key: 'userInfo',
       success: res => {
         if (res.errMsg) {
+          console.log(res.data.over_money);
           than.setData({
             userInfo: res.data
           });

@@ -144,6 +144,27 @@ Page({
             than.soldOut();
           } else {
             than.countDown(than, 8);
+            // 更新前端显示的账户余额
+            wx.getStorage({
+              key: 'userInfo',
+              success: res => {
+                if (res.errMsg) {
+                  let oldMoney = Number(res.data.over_money);
+                  let proPrice = Number(pro.price);
+                  if (oldMoney >= proPrice) {
+                    console.log('xxx');
+                    res.data.over_money = oldMoney - proPrice;
+                  } else {
+                    res.data.over_money = oldMoney;
+                  }
+                  console.log(res.data);
+                  wx.setStorage({
+                    key: 'userInfo',
+                    data: res.data
+                  });
+                }
+              }
+            });
             wx.showToast({
               title: '下单成功',
               icon: 'success',
