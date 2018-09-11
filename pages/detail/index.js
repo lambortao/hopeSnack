@@ -152,12 +152,10 @@ Page({
                   let oldMoney = Number(res.data.over_money);
                   let proPrice = Number(pro.price);
                   if (oldMoney >= proPrice) {
-                    console.log('xxx');
                     res.data.over_money = oldMoney - proPrice;
                   } else {
                     res.data.over_money = oldMoney;
                   }
-                  console.log(res.data);
                   wx.setStorage({
                     key: 'userInfo',
                     data: res.data
