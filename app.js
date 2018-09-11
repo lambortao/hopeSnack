@@ -3,7 +3,7 @@ App({
   onLaunch: function () {
     // 打开debug
     wx.setEnableDebug({
-        enableDebug: true
+        enableDebug: false
     });
     // 展示本地存储能力
     // var logs = wx.getStorageSync('logs') || []

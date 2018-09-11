@@ -19,9 +19,9 @@
       wx:for="{{orderList}}" 
       wx:key="unique"
       class="alone-bill {{ item.bill ? 'clear' : '' }}">
-        <text class="product-name">{{item.pro_name}}</text>
-        <text class="buy-time">{{item.start_time}}</text>
-        <text class="product-money">￥{{item.pro_price}}</text>
+        <text class="product-name f2">{{item.pro_name}}</text>
+        <text class="buy-time f2">{{item.start_time}}</text>
+        <text class="product-money f1">￥{{item.pro_price}}</text>
       </view>
     </view>
   </view>
