@@ -1,7 +1,9 @@
 Page({
   data: {
     openid: '',
-    userInfo: {},
+    userInfo: {
+      avatarUrl: '../../images/head.png'
+    },
     buttonBool: true,
     loading: true,
     disabled: true,

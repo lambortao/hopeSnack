@@ -23,6 +23,7 @@
         <text class="buy-time f2">{{item.start_time}}</text>
         <text class="product-money f1">￥{{item.pro_price}}</text>
       </view>
+      <view class='none-order' wx:if="{{ data.orderList.length == 0 }}">暂无订单</view>
     </view>
   </view>
   <view class="about-box">

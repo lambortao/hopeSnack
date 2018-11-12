@@ -33,7 +33,6 @@ Page({
       key: 'userInfo',
       success: res => {
         if (res.errMsg) {
-          console.log(res.data.over_money);
           than.setData({
             userInfo: res.data
           });
@@ -43,6 +42,7 @@ Page({
     })
   },
   getOrderList (userId) {
+    console.log(this.data.orderList);
     let than = this;
     wx.request({
       url: 'https://zytao.cc/server/snack/admin.php/api/getOrderList',
