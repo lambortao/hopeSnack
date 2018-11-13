@@ -24,6 +24,9 @@ Page({
       }),
       success: function (res) {
         if (res.statusCode === 200) {
+          wx.setNavigationBarTitle({
+            title: res.data[0].name 
+          })
           than.setData({
             productData: res.data[0],
             imgUrls: res.data[0].swiper.split('|')
@@ -85,7 +88,7 @@ Page({
     } else {
       wx.showModal({
         title: '提示',
-        content: '该小程序为公司内部使用，外部人员请勿下单',
+        content: '希望小卖铺仅为公司内部使用',
         showCancel: true,
         cancelText: '不再显示',
         confirmText: '我已知晓',
