@@ -7,7 +7,7 @@
     <text class="user-name">{{userInfo.nickName}}</text>
     <!-- <text class="money">已消费：￥500</text> -->
     <text class="user-money">余额：￥{{userInfo.over_money}}</text>
-    <text class="about">?</text>
+    <!-- <text class="about">?</text> -->
   </view>
   <view class="bill-list">
     <view class="bill-header">
@@ -15,15 +15,14 @@
       <text class="bill-over-money red">未结算：￥{{arrears}}</text>
     </view>
     <view class="bill">
-      <view 
-      wx:for="{{orderList}}" 
-      wx:key="unique"
-      class="alone-bill {{ item.bill ? 'clear' : '' }}">
-        <text class="product-name f2">{{item.pro_name}}</text>
-        <text class="buy-time f2">{{item.start_time}}</text>
-        <text class="product-money f1">￥{{item.pro_price}}</text>
-      </view>
-      <view class='none-order' wx:if="{{ data.orderList.length == 0 }}">暂无订单</view>
+      <block wx:if="{{ orderList.length == 0 }}"><view class='none-order'>暂无订单</view></block>
+      <block wx:else>
+        <view wx:for="{{orderList}}" wx:key="unique" class="alone-bill {{ item.bill ? 'clear' : '' }}">
+          <text class="product-name f2">{{item.pro_name}}</text>
+          <text class="buy-time f2">{{item.start_time}}</text>
+          <text class="product-money f1">￥{{item.pro_price}}</text>
+        </view>
+      </block>
     </view>
   </view>
   <view class="about-box">

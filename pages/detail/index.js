@@ -43,6 +43,7 @@ Page({
       key: 'userInfo',
       success: res => {
         if (res.errMsg) {
+          console.log(res.data);
           than.setData({
             userInfo: res.data
           });
@@ -52,7 +53,7 @@ Page({
   },
   soldOut () {
     wx.showToast({
-      title: '已售罄',
+      title: '该商品已售罄',
       image: '../../images/alert.png',
       duration: 2000
     });
@@ -93,12 +94,10 @@ Page({
         cancelText: '不再显示',
         confirmText: '我已知晓',
         success: function(res) {
-          if (res.confirm) {
-            than.buybuybuy(than.data.productData, than.data.userInfo);
-          } else if (res.cancel) {
+          if (res.cancel) {
             wx.setStorageSync('buyAlert', true);
-            than.buybuybuy(than.data.productData, than.data.userInfo);
           }
+          than.buybuybuy(than.data.productData, than.data.userInfo);
         }
       })
     }
@@ -167,7 +166,7 @@ Page({
               }
             });
             wx.showToast({
-              title: '下单成功',
+              title: '自己去拿~',
               icon: 'success',
               duration: 2000
             });

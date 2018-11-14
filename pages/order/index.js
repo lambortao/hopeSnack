@@ -42,7 +42,6 @@ Page({
     })
   },
   getOrderList (userId) {
-    console.log(this.data.orderList);
     let than = this;
     wx.request({
       url: 'https://zytao.cc/server/snack/admin.php/api/getOrderList',
@@ -53,10 +52,10 @@ Page({
       success: function (res) {
         console.log(res);
         if (res.statusCode === 200) {
-          than.setData({
-            orderList: res.data
-          });
           if (res.data != null) {
+            than.setData({
+              orderList: res.data
+            });
             let nowMoney = 0;
             for (const iterator of res.data) {
               if (!iterator.bill){

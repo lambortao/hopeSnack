@@ -101,3 +101,9 @@
 .clear text{
   color: #888 !important;
 }
+.none-order{
+  width: 100%;
+  text-align: center;
+  font-size: 36rpx;
+  color: #000;
+}
