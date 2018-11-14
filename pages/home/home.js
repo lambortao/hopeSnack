@@ -63,7 +63,6 @@ Page({
   onGetUserinfo: function(e) {
     let userInfo = e.detail.userInfo;
     userInfo.openid = this.openid;
-    console.log(userInfo);
     let than = this;
     wx.request({
       url: 'https://zytao.cc/server/snack/admin.php/api/saveUserInfo',

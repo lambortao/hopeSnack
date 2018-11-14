@@ -47,6 +47,7 @@
   border-radius: 10rpx;
 }
 .head-image image{
+  height: 100%;
   width: 100%;
 }
 .pro-text{

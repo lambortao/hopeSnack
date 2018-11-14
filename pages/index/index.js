@@ -35,7 +35,6 @@ Page({
       method: 'POST',
       success: function (res) {
         if (res.statusCode === 200) {
-          console.log(res.data);
           than.setData({
             productList: res.data
           })

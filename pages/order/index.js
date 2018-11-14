@@ -50,7 +50,6 @@ Page({
         id: userId
       }),
       success: function (res) {
-        console.log(res);
         if (res.statusCode === 200) {
           if (res.data != null) {
             than.setData({
