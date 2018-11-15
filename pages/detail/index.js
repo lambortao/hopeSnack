@@ -65,7 +65,6 @@ Page({
     });
   },
   buy (e) {
-    let lsBuy = wx.getStorageSync('buyAlert');
     if (this.data.productData.length === 0) {
       wx.showToast({
         title: '获取商品信息失败！',
@@ -83,23 +82,18 @@ Page({
       return;
     }
     let than = this;
-    if (lsBuy) {
-      this.buybuybuy(this.data.productData, this.data.userInfo);
-    } else {
-      wx.showModal({
-        title: '提示',
-        content: '希望小卖铺仅为公司内部使用',
-        showCancel: true,
-        cancelText: '不再显示',
-        confirmText: '我已知晓',
-        success: function(res) {
-          if (res.cancel) {
-            wx.setStorageSync('buyAlert', true);
-          }
+    wx.showModal({
+      title: '提示',
+      content: '无需线上付款，点击确定下单即可生成一个新的订单',
+      showCancel: true,
+      cancelText: '取消下单',
+      confirmText: '确认下单',
+      success: function (res) {
+        if (res.confirm) {
           than.buybuybuy(than.data.productData, than.data.userInfo);
         }
-      })
-    }
+      }
+    })
   },
   countDown (than, count) {
     if (count == 0) {

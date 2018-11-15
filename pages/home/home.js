@@ -22,9 +22,11 @@ Page({
       key: 'userInfo',
       data: than.data.userInfo
     });
-    wx.switchTab({
-      url: '../index/index'
-    });
+    setTimeout(()=>{
+      wx.switchTab({
+        url: '../index/index'
+      });
+    }, 500);
   },
   onLoad: function() {
     // 获取openid，到后台去查询该用户是否为第一次登录
