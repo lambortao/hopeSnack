@@ -12,7 +12,7 @@
   <view class="bill-list">
     <view class="bill-header">
       <text class="bill-title">全部订单</text>
-      <text class="bill-over-money red">未结算：￥{{arrears}}</text>
+      <text class="bill-over-money red">未结算金额：￥{{arrears}}</text>
     </view>
     <view class="bill">
       <block wx:if="{{ orderList.length == 0 }}"><view class='none-order'>暂无订单</view></block>

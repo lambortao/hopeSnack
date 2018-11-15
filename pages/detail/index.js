@@ -83,11 +83,11 @@ Page({
     }
     let than = this;
     wx.showModal({
-      title: '提示',
-      content: '无需线上付款，点击确定下单即可生成一个新的订单',
+      title: '↓给我瞅仔细点↓',
+      content: '仅供公司内部使用！无需线上付款！你没看错，下了订单东西拿不拿我都会找你收钱的☺☺☺',
       showCancel: true,
-      cancelText: '取消下单',
-      confirmText: '确认下单',
+      cancelText: '那取消吧',
+      confirmText: '没毛病',
       success: function (res) {
         if (res.confirm) {
           than.buybuybuy(than.data.productData, than.data.userInfo);

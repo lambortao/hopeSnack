@@ -14,7 +14,8 @@
   </swiper>
   <view class="information">
     <text class="name">{{productData.name}}</text>
-    <text class="intro">{{productData.content}}</text>
+    <text class="intro">{{productData.intro}}</text>
+    <text class="content">{{productData.content}}</text>
     <text class="money">￥{{productData.price}}</text>
     <text class="button"></text>
   </view>
