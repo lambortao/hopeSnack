@@ -159,9 +159,10 @@ Page({
               }
             });
             wx.showToast({
-              title: '自己去拿~',
+              title: '稍等，马上送☺',
               icon: 'success',
-              duration: 2000
+              duration: 3000,
+              mask: true
             });
           }
         }
