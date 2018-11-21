@@ -2,7 +2,7 @@
 <view class="container">
   <view class="banner">
     <view class="name">
-      <image src="../../images/title.png" />
+      <text>积分兑换平台</text>
     </view>
   </view>
   <view class="list">
@@ -13,14 +13,14 @@
       <view class="pro-text">
         <text class="pro-name">{{item.name}}</text>
         <text class="pro-intro">{{item.intro}}</text>
-        <text class="pro-money">￥{{item.price}}</text>
+        <text class="pro-money">{{item.price}}积分</text>
       </view>
       <navigator url="/pages/detail/index?id={{item.id}}">
         <button 
         class="buy" 
         size="mini" 
         type="{{ item.stock == 0 ? 'default' : 'primary' }}" 
-        >{{ item.stock == 0 ? '已售罄' : '查看详情' }}</button>
+        >{{ item.stock == 0 ? '换完了' : '查看详情' }}</button>
       </navigator>
     </view>
   </view>

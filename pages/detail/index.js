@@ -9,7 +9,7 @@ Page({
     userInfo: [],
     buyAlert: false,
     buyButton: {
-      content: '立即购买',
+      content: '我要兑换',
       type: 'primary',
       disabled: false
     }
@@ -52,13 +52,13 @@ Page({
   },
   soldOut () {
     wx.showToast({
-      title: '该商品已售罄',
+      title: '该物品已经被换完了',
       image: '../../images/alert.png',
       duration: 2000
     });
     this.setData({
       buyButton: {
-        content: '已售罄',
+        content: '兑换',
         type: 'primary',
         disabled: true
       }
@@ -67,7 +67,7 @@ Page({
   buy (e) {
     if (this.data.productData.length === 0) {
       wx.showToast({
-        title: '获取商品信息失败！',
+        title: '获取物品信息失败！',
         icon: 'success',
         duration: 5000
       });
@@ -83,8 +83,8 @@ Page({
     }
     let than = this;
     wx.showModal({
-      title: '↓给我瞅仔细点↓',
-      content: '仅供公司内部使用！无需线上付款！你没看错，下了订单东西拿不拿我都会找你收钱的☺☺☺',
+      title: '↓仔细看下面↓',
+      content: '仅供公司内部使用，下单后积分会自动扣除，积分扣除后将无法退还☺',
       showCancel: true,
       cancelText: '那取消吧',
       confirmText: '没毛病',
@@ -99,7 +99,7 @@ Page({
     if (count == 0) {
       than.setData({
         buyButton: {
-          content: '立即购买',
+          content: '我要兑换',
           type: 'primary',
           disabled: false
         }

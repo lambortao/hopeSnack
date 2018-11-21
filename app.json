@@ -8,7 +8,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "希望小卖铺",
+    "navigationBarTitleText": "积分兑换平台",
     "navigationBarTextStyle": "black"
   },
   "tabBar":{
@@ -17,12 +17,12 @@
     "selectedColor": "#09bb07",
     "list": [{
       "pagePath": "pages/index/index",
-      "text": "商品",
+      "text": "兑换列表",
       "iconPath": "./images/list-out.png",
       "selectedIconPath": "./images/list-over.png"
     }, {
       "pagePath": "pages/order/index",
-      "text": "订单",
+      "text": "我的兑换",
       "iconPath": "./images/order-out.png",
       "selectedIconPath": "./images/order-over.png"
     }]

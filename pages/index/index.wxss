@@ -7,7 +7,7 @@
 .banner{
   width: 100%;
   height: 420rpx;
-  background-image: url('https://zytao.cc/server/snack/topic.jpg');
+  background-image: url('https://zytao.cc/server/snack/uploads/topic.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,13 +16,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100%;
 }
 .name image{
   width: 392rpx;
   height: 100rpx;
+}
+.name text{
+  font-size: 60rpx;
+  color: #fff;
 }
 .list{
   width: 100%;

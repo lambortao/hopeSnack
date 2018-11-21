@@ -33,6 +33,9 @@ Page({
       key: 'userInfo',
       success: res => {
         if (res.errMsg) {
+          if (!res.data.avatarUrl) {
+            res.data.avatarUrl = '../../images/head.png';
+          }
           than.setData({
             userInfo: res.data
           });

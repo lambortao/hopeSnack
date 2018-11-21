@@ -48,6 +48,9 @@ Page({
             })
           } else {
             // 已经注册，直接进入小程序
+            if (!res.data.avatarUrl) {
+              res.data.avatarUrl = '../../images/head.png';
+            }
             than.setData({
               buttonBool: false,
               userInfo: res.data,
@@ -71,6 +74,9 @@ Page({
       method: 'POST',
       data: JSON.stringify(userInfo),
       success: function (res) {
+        if (!res.data.avatarUrl) {
+          res.data.avatarUrl = '../../images/head.png';
+        }
         than.setData({
           buttonBool: false,
           userInfo: res.data,

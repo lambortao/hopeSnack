@@ -5,22 +5,20 @@
       <image src="{{ userInfo.avatarUrl }}" />
     </view>
     <text class="user-name">{{userInfo.nickName}}</text>
-    <!-- <text class="money">已消费：￥500</text> -->
-    <text class="user-money">余额：￥{{userInfo.over_money}}</text>
-    <!-- <text class="about">?</text> -->
+    <text class="user-money">我的积分：{{userInfo.over_money}}</text>
   </view>
   <view class="bill-list">
     <view class="bill-header">
-      <text class="bill-title">全部订单</text>
-      <text class="bill-over-money red">未结算金额：￥{{arrears}}</text>
+      <text class="bill-title">兑换记录</text>
+      <text class="bill-over-money red">所欠积分：{{arrears}}</text>
     </view>
     <view class="bill">
-      <block wx:if="{{ orderList.length == 0 }}"><view class='none-order'>暂无订单</view></block>
+      <block wx:if="{{ orderList.length == 0 }}"><view class='none-order'>暂无兑换记录</view></block>
       <block wx:else>
         <view wx:for="{{orderList}}" wx:key="unique" class="alone-bill {{ item.bill ? 'clear' : '' }}">
           <text class="product-name f2">{{item.pro_name}}</text>
           <text class="buy-time f2">{{item.start_time}}</text>
-          <text class="product-money f1">￥{{item.pro_price}}</text>
+          <text class="product-money f1">{{item.pro_price}}积分</text>
         </view>
       </block>
     </view>

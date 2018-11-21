@@ -16,7 +16,7 @@
     <text class="name">{{productData.name}}</text>
     <text class="intro">{{productData.intro}}</text>
     <text class="content">{{productData.content}}</text>
-    <text class="money">￥{{productData.price}}</text>
+    <text class="money">{{productData.price}}积分</text>
     <text class="button"></text>
   </view>
   <view class="button-box">
