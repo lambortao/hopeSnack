@@ -84,5 +84,4 @@
   align-items: flex-end;
   white-space: nowrap;
   font-weight: 700;
-  transform: translateX(-4rpx);
 }

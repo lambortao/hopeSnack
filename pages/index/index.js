@@ -67,6 +67,32 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    let than = this;
+    wx.showNavigationBarLoading();
+    wx.request({
+      url: 'https://zytao.cc/server/snack/admin.php/product/getProductList',
+      method: 'POST',
+      success: function (res) {
+        if (res.statusCode === 200) {
+          than.setData({
+            productList: res.data
+          });
+          // 隐藏导航栏加载框
+          wx.hideNavigationBarLoading();
+          // 停止下拉动作
+          wx.stopPullDownRefresh();
+        }
+      },
+      fail: function () {
+        // fail  
+      },
+      complete: function () {
+        // complete  
+      }
+    })
+  },
+
+  startPullDownRefresh: function() {
 
   },
 

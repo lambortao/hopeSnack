@@ -52,13 +52,13 @@ Page({
   },
   soldOut () {
     wx.showToast({
-      title: '该物品已经被换完了',
+      title: '被换完啦！',
       image: '../../images/alert.png',
       duration: 2000
     });
     this.setData({
       buyButton: {
-        content: '兑换',
+        content: '兑换结束',
         type: 'primary',
         disabled: true
       }
