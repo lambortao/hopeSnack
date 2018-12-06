@@ -38,7 +38,6 @@ swiper-item{
   font-size: 54rpx;
   color: #e64340;
   font-weight: 700;
-  transform: translateX(-6rpx);
 }
 .button{
   width: 100%;
