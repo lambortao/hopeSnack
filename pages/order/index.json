@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "我的兑换",
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {},
+  "enablePullDownRefresh": true
 }

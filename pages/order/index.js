@@ -39,12 +39,12 @@ Page({
           than.setData({
             userInfo: res.data
           });
-          than.getOrderList(res.data.id);
+          than.getOrderList(res.data.id, function() {});
         }
       }
     })
   },
-  getOrderList (userId) {
+  getOrderList (userId, fun) {
     let than = this;
     wx.request({
       url: 'https://zytao.cc/server/snack/admin.php/api/getOrderList',
@@ -67,11 +67,45 @@ Page({
             than.setData({
               arrears: nowMoney / 10
             });
+            fun();
           }
         }
       },
       fail: function () {},
       complete: function () {}
+    });
+  },
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+    let than = this;
+    wx.showNavigationBarLoading();
+    wx.request({
+      url: 'https://zytao.cc/server/snack/admin.php/api/getUserIntegral',
+      method: 'POST',
+      data: JSON.stringify({
+        openid: this.data.userInfo.openid
+      }),
+      success: function (res) {
+        if (res.statusCode === 200) {
+          than.setData({
+            userInfo: res.data[0]
+          });
+          wx.setStorage({
+            key: 'userInfo',
+            data: res.data[0]
+          });
+        }
+      },
+      fail: function () { },
+      complete: function () { }
+    })
+    than.getOrderList(this.data.userInfo.id, function() {
+      // 隐藏导航栏加载框
+      wx.hideNavigationBarLoading();
+      // 停止下拉动作
+      wx.stopPullDownRefresh();
     });
   }
 })

@@ -6,7 +6,8 @@
     "pages/order/index"
   ],
   "window":{
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle":"dark",
+    "backgroundColor": "#fff",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "积分兑换平台",
     "navigationBarTextStyle": "black"
