@@ -71,8 +71,8 @@ Page({
             than.setData({
               arrears: nowMoney / 10
             });
-            fun();
           }
+          fun();
         }
       },
       fail: function () {},
@@ -106,14 +106,14 @@ Page({
       complete: function () { }
     })
     than.getOrderList(this.data.userInfo.id, function () {
-      than.setData({
-        currentTab: 0
-      });
-      than.clickTab(null);
       // 隐藏导航栏加载框
       wx.hideNavigationBarLoading();
       // 停止下拉动作
       wx.stopPullDownRefresh();
+      than.setData({
+        currentTab: 0
+      });
+      than.clickTab(null);
     });
   },
   clickTab(event) {

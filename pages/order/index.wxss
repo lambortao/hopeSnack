@@ -20,10 +20,9 @@ page{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #181818;
-  box-shadow: 0rpx 4rpx 8rpx #353535;
   padding: 30rpx 20rpx;
   border-radius: 5rpx;
+  background-color: #1e272e;
 }
 .user-head .head{
   height: 130rpx;
@@ -120,9 +119,9 @@ page{
   display: flex;
   align-items: center;
   border: 1rpx solid #eeeeee;
+  box-shadow: 0rpx 3rpx 6rpx #eee;
   border-radius: 5rpx;
   margin-bottom: 15rpx;
-  box-shadow: 0rpx 3rpx 6rpx #eee;
   background-color: #fff;
 }
 .alone-bill text{
