@@ -2,17 +2,25 @@
 <view>
   <view class="user">
     <view class="user-head">
-      <image src="{{ userInfo.avatarUrl }}" />
+      <view class="head">
+        <image src="{{ userInfo.avatarUrl }}" />
+        <view class="head-text">
+          <text class="user-name">{{userInfo.nickName}}</text>
+          <view class="integral">
+            <text class="user-money">剩余积分：{{userInfo.over_money}}</text> 
+            <text class="user-money">未结积分：{{arrears}}</text>
+          </view>
+        </view>
+      </view>
     </view>
-    <text class="user-name">{{userInfo.nickName}}</text>
-    <text class="user-money">我的积分：{{userInfo.over_money}}</text>
   </view>
   <view class="bill-list">
-    <view class="bill-header">
-      <text class="bill-title">兑换记录</text>
-      <text class="bill-over-money red">所欠积分：{{arrears}}</text>
-    </view>
     <view class="bill">
+      <view class="redemption-module">
+        <text class="active">未结兑换</text>
+        <text>已结兑换</text>
+        <text>弃用兑换</text>
+      </view>
       <block wx:if="{{ orderList.length == 0 }}"><view class='none-order'>暂无兑换记录</view></block>
       <block wx:else>
         <view wx:for="{{orderList}}" wx:key="unique" class="alone-bill {{ item.bill ? 'clear' : '' }}">

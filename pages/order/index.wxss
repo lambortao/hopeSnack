@@ -1,53 +1,73 @@
 /* pages/order/index.wxss */
+page{
+  background-color: #f9f9f9;
+}
 .user{
   width: 100%;
-  height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #f5f5f5;
+  box-sizing: border-box;
+  padding: 20rpx 20rpx 0 20rpx;
 }
 .red{
   color: #e64340;
 }
 .user-head{
-  width: 200rpx;
-  height: 200rpx;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #181818;
+  box-shadow: 0rpx 4rpx 8rpx #353535;
+  padding: 30rpx 20rpx;
+  border-radius: 5rpx;
+}
+.user-head .head{
+  height: 130rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.user-head .head image{
+  width: 130rpx;
+  height: 130rpx;
   border-radius: 50%;
   overflow: hidden;
 }
-.user-head image{
-  width: 100%;
-  height: 100%;
+.head-text{
+  margin-left: 20rpx;
 }
-.user .user-name{
-  margin: 30rpx 0;
-  font-size: 0.9em;
-  color: #888;
+.user-head .user-name{
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 0;
+  font-size: 1.05em;
+  font-weight: bold;
+  letter-spacing: 2rpx;
+  color: #fff;
+}
+.user-head .integral{
+  height: 60rpx;
 }
 .user-money{
+  display: inline-block;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin: 5px 5px 5px 0;
   font-size: 0.8em;
-  color: #e64340;
-  font-weight: bold;
+  color: #fff;
+  padding: 0 15rpx;
+  border-radius: 5rpx;
+  background-color: #c8483f;
 }
 
 .bill-list{
   width: 100%;
   padding: 20rpx;
   box-sizing: border-box;
-}
-.bill-header{
-  box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20rpx;
-  padding: 0 20rpx;
-}
-.bill-header text{
-  font-size: 0.8em;
-  font-weight: bold;
 }
 .about{
   width: 50rpx;
@@ -66,6 +86,31 @@
   width: 100%;
   box-sizing: border-box;
 }
+.redemption-module{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.redemption-module text{
+  display: block;
+  width: 31%;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 0.7em;
+  border: 1px solid #eeeeee;
+  border-radius: 5rpx;
+}
+.redemption-module .active{
+  background-color: #09bb07;
+  border-color: #09bb07;
+  box-shadow: 0rpx 3rpx 10rpx #09bb07 inset;
+  color: #fff;
+}
+
 .alone-bill{
   width: 100%;
   box-sizing: border-box;
@@ -77,6 +122,7 @@
   border-radius: 5rpx;
   margin-bottom: 15rpx;
   box-shadow: 0rpx 3rpx 10rpx #eee;
+  background-color: #fff;
 }
 .alone-bill text{
   color: #333;
