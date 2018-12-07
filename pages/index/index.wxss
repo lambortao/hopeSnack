@@ -13,7 +13,6 @@ page{
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 5rpx;
-  margin-bottom: 20rpx;
 }
 .name{
   display: flex;
@@ -38,6 +37,27 @@ page{
   justify-content: space-between;
   flex-wrap: wrap;
   box-sizing: border-box;
+}
+.tab-box{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 40rpx 0 30rpx 0;
+}
+.tab-box .tab{
+  text-align: center;
+  font-size: 0.7em;
+  border: 1px solid #eeeeee;
+  border-radius: 5rpx;
+  background-color: #fff;
+}
+.tab-box text{
+  display: block;
+  width: 32%;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-bottom: 10rpx;
 }
 .product{
   width: calc(50% - 10rpx);

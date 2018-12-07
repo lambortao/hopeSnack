@@ -103,6 +103,7 @@ page{
   font-size: 0.7em;
   border: 1px solid #eeeeee;
   border-radius: 5rpx;
+  background-color: #fff;
 }
 .redemption-module .active{
   background-color: #09bb07;
