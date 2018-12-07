@@ -50,7 +50,8 @@ page{
   color: #fff;
 }
 .user-head .integral{
-  height: 60rpx;
+  display: flex;
+  flex-direction: column;
 }
 .user-money{
   display: inline-block;

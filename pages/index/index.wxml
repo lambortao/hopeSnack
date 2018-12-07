@@ -7,9 +7,7 @@
   </view>
   <view class="list">
     <view wx:for="{{productList}}" wx:key="unique" class="product">
-      <navigator url="/pages/detail/index?id={{item.id}}" class="head-image">
-        <image src="{{item.kv}}" />
-      </navigator>
+      <navigator url="/pages/detail/index?id={{item.id}}" class="head-image" style="background-image: url({{item.kv}});"></navigator>
       <view class="pro-text">
         <text class="pro-name">{{item.name}}</text>
         <text class="pro-intro">{{item.intro}}</text>

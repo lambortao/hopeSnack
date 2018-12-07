@@ -6,11 +6,11 @@
         <image src="{{ userInfo.avatarUrl }}" />
         <view class="head-text">
           <text class="user-name">{{userInfo.nickName}}</text>
-          <view class="integral">
-            <text class="user-money">剩余积分：{{userInfo.over_money}}</text> 
-            <text class="user-money">未结积分：{{arrears}}</text>
-          </view>
         </view>
+      </view>
+      <view class="integral">
+        <text class="user-money">剩余积分：{{userInfo.over_money}}</text> 
+        <text class="user-money">未结积分：{{arrears}}</text>
       </view>
     </view>
   </view>

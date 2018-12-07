@@ -1,16 +1,19 @@
 /*# sourceMappingURL=index.wxss.map */
-.container{
-  /* transform: scale(0.95);
-  opacity: 0.8; */
+page{
   transition: all 500ms;
+  padding: 20rpx;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
 }
 .banner{
   width: 100%;
-  height: 420rpx;
+  height: 360rpx;
   background-image: url('https://zytao.cc/server/snack/uploads/topic.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 5rpx;
+  margin-bottom: 20rpx;
 }
 .name{
   display: flex;
@@ -19,6 +22,7 @@
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100%;
+  border-radius: 5rpx;
 }
 .name image{
   width: 392rpx;
@@ -30,29 +34,33 @@
 }
 .list{
   width: 100%;
-  padding: 4vw;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   box-sizing: border-box;
 }
 .product{
-  width: 44vw;
+  width: calc(50% - 10rpx);
   margin-bottom: 25rpx;
+  overflow: hidden;
 }
 .product button{
   width: 100%;
 }
 .head-image{
-  width: 44vw;
-  height: 44vw;
+  width: 100%;
+  height: 340rpx;
+  border-radius: 5rpx;
+  background-size: cover;
+  background-position: cenetr;
   overflow: hidden;
-  border: 1px solid #f0f0f0;
-  border-radius: 10rpx;
+}
+navigator{
+  border-radius: 5px;
 }
 .head-image image{
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 .pro-text{
   width: 100%;
