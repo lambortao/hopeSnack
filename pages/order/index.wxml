@@ -17,13 +17,13 @@
   <view class="bill-list">
     <view class="bill">
       <view class="redemption-module">
-        <text class="active">未结兑换</text>
-        <text>已结兑换</text>
-        <text>弃用兑换</text>
+        <text class="{{ currentTab == 0 ? 'active' : '' }}" bindtap="clickTab" data-pos='0'>未结兑换</text>
+        <text class="{{ currentTab == 1 ? 'active' : '' }}" bindtap="clickTab" data-pos='1'>已结兑换</text>
+        <text class="{{ currentTab == 2 ? 'active' : '' }}" bindtap="clickTab" data-pos='2'>弃用兑换</text>
       </view>
-      <block wx:if="{{ orderList.length == 0 }}"><view class='none-order'>暂无兑换记录</view></block>
+      <block wx:if="{{ showOrderList.length == 0 }}"><view class='none-order'>暂无</view></block>
       <block wx:else>
-        <view wx:for="{{orderList}}" wx:key="unique" class="alone-bill {{ item.bill ? 'clear' : '' }}">
+        <view wx:for="{{showOrderList}}" wx:key="unique" class="alone-bill {{ item.bill ? 'clear' : '' }}">
           <text class="product-name f2">{{item.pro_name}}</text>
           <text class="buy-time f2">{{item.start_time}}</text>
           <text class="product-money f1">{{item.pro_price}}积分</text>

@@ -13,7 +13,9 @@ Page({
   data: {
     userInfo: {},
     orderList: [],
-    arrears: 0
+    showOrderList: [],
+    arrears: 0,
+    currentTab: 0
   },
 
   /**
@@ -39,10 +41,12 @@ Page({
           than.setData({
             userInfo: res.data
           });
-          than.getOrderList(res.data.id, function() {});
+          than.getOrderList(res.data.id, function () {
+            than.clickTab(null);
+          });
         }
       }
-    })
+    });
   },
   getOrderList (userId, fun) {
     let than = this;
@@ -101,11 +105,36 @@ Page({
       fail: function () { },
       complete: function () { }
     })
-    than.getOrderList(this.data.userInfo.id, function() {
+    than.getOrderList(this.data.userInfo.id, function () {
+      than.setData({
+        currentTab: 0
+      });
+      than.clickTab(null);
       // 隐藏导航栏加载框
       wx.hideNavigationBarLoading();
       // 停止下拉动作
       wx.stopPullDownRefresh();
+    });
+  },
+  clickTab(event) {
+    var pos;
+    if (event) {
+      console.log(event);
+      pos = event.target.dataset.pos;
+    } else {
+      pos = 0;
+    }
+    this.setData({
+      currentTab: pos
+    });
+    var newList = [];
+    for(var key in this.data.orderList) {
+      if (this.data.orderList[key].status == pos) {
+        newList.push(this.data.orderList[key]);
+      }
+    }
+    this.setData({
+      showOrderList: newList
     });
   }
 })
