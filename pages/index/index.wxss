@@ -52,6 +52,12 @@ page{
   border-radius: 5rpx;
   background-color: #fff;
 }
+.tab-box .active{
+  background-color: #09bb07;
+  border-color: #09bb07;
+  box-shadow: 0rpx 3rpx 10rpx #09bb07 inset;
+  color: #fff;
+}
 .tab-box text{
   display: block;
   width: 32%;

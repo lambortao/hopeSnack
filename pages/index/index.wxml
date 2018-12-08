@@ -7,14 +7,15 @@
   </view>
   <view class="list">
     <view class='tab-box'>
-      <text class='tab'>阿宽家</text>
-      <text class='tab'>饮品</text>
-      <text class='tab'>热销</text>
-      <text class='tab'>热销</text>
-      <text class='tab'>热销</text>
-      <text></text>
+      <text 
+        wx:for="{{productTagList}}" 
+        wx:key="unique" 
+        data-tag='{{item.name}}'
+        data-pos='{{item.id}}'
+        bindtap="clickTag"
+        class="{{ item.intro ? 'tab' : '' }} {{ item.id == tagActive ? 'active' : '' }}">{{ item.intro }}</text>
     </view>
-    <view wx:for="{{productList}}" wx:key="unique" class="product">
+    <view wx:for="{{showProductList}}" wx:key="unique" class="product">
       <navigator url="/pages/detail/index?id={{item.id}}" class="head-image" style="background-image: url({{item.kv}});"></navigator>
       <view class="pro-text">
         <text class="pro-name">{{item.name}}</text>
