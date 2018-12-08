@@ -8,7 +8,7 @@
   "window":{
     "backgroundTextStyle":"dark",
     "backgroundColor": "#fff",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#f9f9f9",
     "navigationBarTitleText": "积分兑换平台",
     "navigationBarTextStyle": "black"
   },
